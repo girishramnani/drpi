@@ -22,6 +22,7 @@
     var element = document.querySelector("#temprature");
       var socket = io.connect('http://localhost:8001'); // change to ur ip
       socket.on('temprature', function (data) {
+
           console.log(data);
           element.innerHTML = data.data;
         });
